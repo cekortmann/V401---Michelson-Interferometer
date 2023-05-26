@@ -10,10 +10,18 @@ from uncertainties.unumpy import uarray                     # Array von Fehler: 
 from uncertainties.unumpy import (nominal_values as noms,   # Wert:             noms(fehlerwert) = x
                                   std_devs as stds)  
 
-def Blang(I,l):
-    return 12.566*10**(-7)*1*3400*I/l
 
-uI = ufloat(0.5, 0.1)
-ul = ufloat(0.102, 0.005)
+nu = uarray ([2540,2607,3002,2504,2519,2836,2596,2664,2967],[0,0,0,0,0,0,0,0,0])
 
-print(Blang(uI, ul))
+ud = uarray(5.00*10**(-3),0.01*10**(-3))
+
+def Lambda(d,z):
+    return d/5.046/z*2
+
+n = len(nu) 
+print(n)                            # Anzahl der Daten
+mean = sum(nu)/n  
+print(mean)                   # Mittelwert
+sigma = (sum((nu - mean)**2)/n-1)**(1/2) 
+print(sigma)
+print('Lambda', Lambda(ud,nu))

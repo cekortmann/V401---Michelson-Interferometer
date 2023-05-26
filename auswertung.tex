@@ -2,3 +2,34 @@
 \label{sec:Auswertung}
 
 \input{fehlerrechnung.tex}
+
+Die Auswertung kann in zwei Teile unterteilt werden. Im ersten Teil wird die Wellenlänge $\lambda$ des Lasers bestimmt. Im zweiten Teil wird
+der Brechungsindex von Luft untersucht.
+
+\subsection{Berechnung der Wellenlänge des verwendeten Lasers.}
+\label{sec:Wellenlänge}
+Die 10 aufgenommenen Messwerte sind in \autoref{tab:Werte1} dargestellt. Aus jedem dieser Werte wird durch Umstellung von \autoref{eqn:Deltad} nach $\lambda$ ein Wert für die Wellenlänge bestimmt. 
+Dabei gilt es zu beachten, dass bei der Berechnung der Hebelarm mit berücksichtigt werden muss. Um tatsächliche Verschiebung zu erhalten muss somit die gemessene Auslenkung mit dem Faktor $5.046$ multipliziert werden \textbf{oder Dividiert?????????}.
+%Aufgrund der Tatsache, dass während Messung 3 das Messgerät kurzzeitig ausgefallen ist, ist dieser Wert wesentlich geringer und wird aufgrund dessen weder in die Berechnung der Standardabweichung noch die des Durchschnitts der Wellenlänge einfließen.
+Die Messgenauigkeit der Messschraube liegt bei $\pm 1.5\, \unit{\micro \meter}$\cite{Messgenauigkeit}. Dieser Fehler ist jedoch zum Ablesefehler, welcher sich auf $\pm 0.01\, \unit{\milli \meter}$ beläuft, nur etwa $15 \%$ so groß und deshalb vernachlässigbar.
+\begin{table}
+    \centering
+    \caption{Messwerte zur Bestimmung der Wellenlänge $\lambda$}
+    \begin{tabular}{c c | c}
+        \toprule
+        $d \mathrm{/} 10^{-3}\, \unit{\meter}$ & $z$: Anzahl der detektierten Maxima & $\lambda \mathrm{/} 10^{-9}\, \unit{\meter}$\\
+        \midrule
+        5.00 \pm 0.01 & 2540.00\pm 181.98& \\
+        5.00 \pm 0.01 & 2607.00\pm 181.98 & \\
+        5.00 \pm 0.01 & 2117.00\pm 181.98 & \\
+        5.00 \pm 0.01 & 3002.00\pm 181.98 & \\
+        5.00 \pm 0.01 & 2504.00\pm 181.98 & \\
+        5.00 \pm 0.01 & 2519.00\pm 181.98 & \\
+        5.00 \pm 0.01 & 2836.00\pm 181.98 & \\
+        5.00 \pm 0.01 & 2596.00\pm 181.98 & \\
+        5.00 \pm 0.01 & 2664.00\pm 181.98 & \\
+        5.00 \pm 0.01 & 2967.00\pm 181.98 & \\
+        \bottomrule
+    \end{tabular}
+    \label{tab:Werte1}
+\end{table}
