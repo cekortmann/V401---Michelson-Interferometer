@@ -13,7 +13,7 @@ Die 10 aufgenommenen Messwerte sind in \autoref{tab:Werte1} dargestellt. Aus jed
 Dabei gilt es zu beachten, dass bei der Berechnung der Hebelarm mit berücksichtigt werden muss. Um tatsächliche Verschiebung zu erhalten muss somit die gemessene Auslenkung mit dem Faktor $\frac{1}{5.046}$ multipliziert werden.% \textbf{oder Dividiert?????????}.
 Aufgrund der Tatsache, dass während Messung 3 das Messgerät kurzzeitig ausgefallen ist, ist dieser Wert wesentlich geringer und wird deshalb weder in die Berechnung der Standardabweichung noch die des Durchschnitts der Wellenlänge einfließen.
 Die Messgenauigkeit der Messschraube liegt bei $\pm 1.5\, \unit{\micro \meter}$\cite{Messgenauigkeit}. Dieser Fehler ist jedoch zum Ablesefehler, welcher sich auf $\pm 0.01\, \unit{\milli \meter}$ beläuft, nur etwa $15 \%$ so groß und deshalb vernachlässigbar.
-Der Fehler der detektierten Maxima wird über die Standardabweichung errechnet. Hierzu wird \autoref{eqn:Standardabweichung} verwendet. Die Abweichung der Wellenlänge wird über die Gaußsche Fehlerfortpflanzung aus \autoref{eqn:GaußMittelwert} berechnet. 
+Der Fehler der detektierten Maxima wird über die Standardabweichung errechnet. Hierzu wird \autoref{eqn:Standardabweichung} verwendet. Die Abweichung der Wellenlänge wird über die Gaußsche Fehlerfortpflanzung aus \autoref{eqn:GaussMittelwert} berechnet. 
 \begin{table}
     \centering
     \caption{Messwerte zur Bestimmung der Wellenlänge $\lambda$}
@@ -40,6 +40,39 @@ So ergibt sich für
 \begin{equation*}
     \bar{\lambda}_{exp}= (736.0\pm 1.5)\, 10^{-9}\, \unit{\meter}\, .
 \end{equation*}
+
+
 \newpage
-\subsubsection{Besttimung des Brechungsindex von Luft}
+\subsubsection{Bestimmung des Brechungsindex von Luft}
 \label{sec:nvonLuft}
+Der Brechungsindex wird mittels \autoref{eqn:brechung} berechnet und gemeinsam mit der Zählrate $z$ in \autoref{tab:brechung} dargestellt. Dabei wurden 
+für die Normalbedingungen, die Temperatur und die Größe der Messzelle
+\begin{align*}
+    \text{Normaldruck: }p_0 &= 1.0132 \,\unit{\bar}\; ,\\
+    \text{Normaltemperatur: }T_0 &= 273.15 \,\unit{\kelvin}\; ,\\
+    \text{Umgebungstemperatur: }T &= 293.15 \,\unit{\kelvin}\; , \\
+    \text{Größe der Messzelle: }b &= 50\,\unit{\milli\meter} \\
+\end{align*}
+angenommen. Auch hier wurde die Abweichung der Messwerte mittels der Standardabweichung (\autoref{eqn:Standardabweichung}) berechnet.
+\begin{table}
+    \centering
+    \caption{Messwerte zur Bestimmung des Brechungsindex $n$.}
+    \begin{tabular}{c c}
+        \toprule
+        $z$: Anzahl der detektierten Maxima & $n$\\
+        \midrule
+        30 \pm 4.42 & $1.00058 \pm 1.18 \cdot 10^{-6}$\\
+        17 \pm 4.42 & $1.00033\pm 6.71 \cdot 10^{-7}$\\
+        19 \pm 4.42 & $1.00037\pm 7.50 \cdot 10^{-7} $\\
+        21 \pm 4.42 & $1.00041\pm 8.29 \cdot 10^{-7}$ \\
+        24 \pm 4.42 & $1.00046 \pm 9.48 \cdot 10^{-7}$ \\
+       
+        \bottomrule
+    \end{tabular}
+    \label{tab:brechung}
+\end{table}
+
+Der Mittelwert des Brechungsindex ergibt sich zu
+\begin{equation*}
+    \bar{n} = 1.0004301 \pm 0.0000009 \; .
+\end{equation*}

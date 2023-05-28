@@ -28,3 +28,23 @@ m= sum(Lambda(ud,nu))/len(Lambda(ud,nu))
 print(sigma)
 print('Lambda', Lambda(ud,nu))
 print('Mittelwert',Lambda(ud,mean))
+
+
+
+zu = uarray ([30, 17, 19, 21, 24],[0,0,0,0,0])
+
+lam = ufloat(736*10**(-9), 1.5*10**(-9))
+
+def brech(z):
+    return 1 + (z*lam*293.15*1.0132*100000)/(2*50*10**(-3)*273.15*(1.0131*100000-0.6*100000))
+
+n2 = len(zu) 
+print(n2)                            # Anzahl der Daten
+mean2 = sum(zu)/n2  
+print(mean2)                   # Mittelwert
+sigma2 = (sum((zu - mean2)**2)/n2-1)**(1/2) 
+m2= sum(brech(zu))/len(brech(zu))
+
+print(sigma2)
+print('Lambda', brech(zu))
+print('Mittelwert',brech(mean2))
