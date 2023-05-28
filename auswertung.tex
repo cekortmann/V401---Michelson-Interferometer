@@ -2,16 +2,18 @@
 \label{sec:Auswertung}
 
 \input{fehlerrechnung.tex}
+\subsection{Auswertung der Messergebnisse}
 
 Die Auswertung kann in zwei Teile unterteilt werden. Im ersten Teil wird die Wellenlänge $\lambda$ des Lasers bestimmt. Im zweiten Teil wird
 der Brechungsindex von Luft untersucht.
 
-\subsection{Berechnung der Wellenlänge des verwendeten Lasers.}
+\subsubsection{Berechnung der Wellenlänge des verwendeten Lasers.}
 \label{sec:Wellenlänge}
 Die 10 aufgenommenen Messwerte sind in \autoref{tab:Werte1} dargestellt. Aus jedem dieser Werte wird durch Umstellung von \autoref{eqn:Deltad} nach $\lambda$ ein Wert für die Wellenlänge bestimmt. 
-Dabei gilt es zu beachten, dass bei der Berechnung der Hebelarm mit berücksichtigt werden muss. Um tatsächliche Verschiebung zu erhalten muss somit die gemessene Auslenkung mit dem Faktor $5.046$ multipliziert werden \textbf{oder Dividiert?????????}.
-%Aufgrund der Tatsache, dass während Messung 3 das Messgerät kurzzeitig ausgefallen ist, ist dieser Wert wesentlich geringer und wird aufgrund dessen weder in die Berechnung der Standardabweichung noch die des Durchschnitts der Wellenlänge einfließen.
+Dabei gilt es zu beachten, dass bei der Berechnung der Hebelarm mit berücksichtigt werden muss. Um tatsächliche Verschiebung zu erhalten muss somit die gemessene Auslenkung mit dem Faktor $\frac{1}{5.046}$ multipliziert werden.% \textbf{oder Dividiert?????????}.
+Aufgrund der Tatsache, dass während Messung 3 das Messgerät kurzzeitig ausgefallen ist, ist dieser Wert wesentlich geringer und wird deshalb weder in die Berechnung der Standardabweichung noch die des Durchschnitts der Wellenlänge einfließen.
 Die Messgenauigkeit der Messschraube liegt bei $\pm 1.5\, \unit{\micro \meter}$\cite{Messgenauigkeit}. Dieser Fehler ist jedoch zum Ablesefehler, welcher sich auf $\pm 0.01\, \unit{\milli \meter}$ beläuft, nur etwa $15 \%$ so groß und deshalb vernachlässigbar.
+Der Fehler der detektierten Maxima wird über die Standardabweichung errechnet. Hierzu wird \autoref{eqn:Standardabweichung} verwendet. Die Abweichung der Wellenlänge wird über die Gaußsche Fehlerfortpflanzung aus \autoref{eqn:GaußMittelwert} berechnet. 
 \begin{table}
     \centering
     \caption{Messwerte zur Bestimmung der Wellenlänge $\lambda$}
@@ -19,17 +21,25 @@ Die Messgenauigkeit der Messschraube liegt bei $\pm 1.5\, \unit{\micro \meter}$\
         \toprule
         $d \mathrm{/} 10^{-3}\, \unit{\meter}$ & $z$: Anzahl der detektierten Maxima & $\lambda \mathrm{/} 10^{-9}\, \unit{\meter}$\\
         \midrule
-        5.00 \pm 0.01 & 2540.00\pm 181.98& \\
-        5.00 \pm 0.01 & 2607.00\pm 181.98 & \\
-        5.00 \pm 0.01 & 2117.00\pm 181.98 & \\
-        5.00 \pm 0.01 & 3002.00\pm 181.98 & \\
-        5.00 \pm 0.01 & 2504.00\pm 181.98 & \\
-        5.00 \pm 0.01 & 2519.00\pm 181.98 & \\
-        5.00 \pm 0.01 & 2836.00\pm 181.98 & \\
-        5.00 \pm 0.01 & 2596.00\pm 181.98 & \\
-        5.00 \pm 0.01 & 2664.00\pm 181.98 & \\
-        5.00 \pm 0.01 & 2967.00\pm 181.98 & \\
+        5.00 \pm 0.01 & 2540.00\pm 181.98& 780.22\pm 1.57\\
+        5.00 \pm 0.01 & 2607.00\pm 181.98 & 760.17\pm 1.52\\
+        5.00 \pm 0.01 & 2117.00\pm 181.98 & 936.12\pm 1.87\\
+        5.00 \pm 0.01 & 3002.00\pm 181.98 & 660.15\pm 1.32\\
+        5.00 \pm 0.01 & 2504.00\pm 181.98 & 791.44\pm 1.58\\
+        5.00 \pm 0.01 & 2519.00\pm 181.98 & 786.73\pm 1.57\\
+        5.00 \pm 0.01 & 2836.00\pm 181.98 & 698.79\pm 1.40\\
+        5.00 \pm 0.01 & 2596.00\pm 181.98 & 763.39\pm 1.53\\
+        5.00 \pm 0.01 & 2664.00\pm 181.98 & 743.91\pm 1.49\\
+        5.00 \pm 0.01 & 2967.00\pm 181.98 & 667.93\pm 1.34\\
         \bottomrule
     \end{tabular}
     \label{tab:Werte1}
 \end{table}
+Aus den berechneten Einzelwerten kann so über \autoref{eqn:Mittelwert} und \autoref{eqn:FehlerMittelwert} ein Mittelwert und dessen Fehler beestimmt werden.
+So ergibt sich für 
+\begin{equation*}
+    \bar{\lambda}_{exp}= (736.0\pm 1.5)\, 10^{-9}\, \unit{\meter}\, .
+\end{equation*}
+\newpage
+\subsubsection{Besttimung des Brechungsindex von Luft}
+\label{sec:nvonLuft}
