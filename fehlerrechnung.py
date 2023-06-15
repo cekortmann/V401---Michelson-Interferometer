@@ -48,3 +48,9 @@ m2= sum(brech(zu))/len(brech(zu))
 print(sigma2)
 print('Lambda', brech(zu))
 print('Mittelwert',brech(mean2))
+
+
+ulexp= uarray(736.0,1.5)
+utheo= uarray(635,0)
+abw= (ulexp-utheo)/utheo
+print(abw)
